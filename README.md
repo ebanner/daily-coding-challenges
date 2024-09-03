@@ -4,7 +4,7 @@
 - CSSBattle
 - GeeksForGeeks
 
-## Daily LeetCode
+## LeetCode
 
 LeetCode posts a daily problem
 
