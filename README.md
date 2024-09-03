@@ -8,4 +8,4 @@
 
 LeetCode posts a daily problem
 
-<img width="1392" alt="Screen Shot 2024-01-11 at 12 54 02 PM" src="https://github.com/ebanner/daily-leetcode/assets/2068912/67e994ea-2769-4d10-9ed4-e6f07f505537">
+<img width="1443" alt="Screenshot 2024-09-02 at 8 48 19 PM" src="https://github.com/user-attachments/assets/ab2deb1e-4da2-4827-bbfa-7ff8519056aa">
