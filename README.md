@@ -1,4 +1,4 @@
-# daily-coding-challenges
+# 📆 daily-coding-challenges
 
 Submissions for websites that post daily coding challenges
 
