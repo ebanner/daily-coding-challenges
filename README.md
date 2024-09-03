@@ -1,8 +1,8 @@
 # daily-coding-challenges
 
-- LeetCode
-- CSSBattle
-- GeeksForGeeks
+- [LeetCode](https://leetcode.com/problemset/)
+- [CSSBattle](https://cssbattle.dev)
+- [GeeksForGeeks](https://www.geeksforgeeks.org/problem-of-the-day)
 
 ## LeetCode
 
