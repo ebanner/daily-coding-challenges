@@ -1,11 +1,7 @@
 class Node:
-    def __init__(self, present=False, children=None):
-        self.present = present
+    def __init__(self, children=None):
         self.children = children or {}
     
-    def __str__(self):
-        return f"present: {self.present}, children: {self.children}"
-
 
 def add(elem, trie):
     root = trie
@@ -14,7 +10,6 @@ def add(elem, trie):
         if digit not in node.children:
             node.children = {**{digit: Node()}, **node.children}
         node = node.children[digit]
-    node.present = True
     return root
 
 
@@ -41,7 +36,9 @@ class Solution:
     def longestCommonPrefix(self, arr1: List[int], arr2: List[int]) -> int:
         arr1 = list(map(str, arr1))
         arr2 = list(map(str, arr2))
+
         arr2_trie = make_trie(arr2)
+
         max_longest_common_prefix = ''
         for a in arr1:
             longest_common_prefix = get_longest_common_prefix(a, arr2_trie)
