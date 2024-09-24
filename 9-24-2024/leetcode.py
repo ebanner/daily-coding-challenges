@@ -1,6 +1,6 @@
 class Node:
-    def __init__(self, children=None):
-        self.children = children or {}
+    def __init__(self):
+        self.children = {}
     
 
 def add(elem, trie):
