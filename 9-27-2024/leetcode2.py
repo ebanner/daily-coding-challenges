@@ -14,11 +14,11 @@ def get_overlap(booking, events):
     booking_start, booking_end = booking
     overlaps = []
     for (event_start, event_end) in events:
-        if event_start <= booking_start < event_end:
-            overlap = (booking_start, event_end)
+        if event_start <= booking_start < event_end: # case where the event starts before and extends into the booking
+            overlap = (booking_start, min(event_end, booking_end))
             overlaps.append(overlap)
-        if booking_start <= event_start < booking_end:
-            overlap = (event_start, booking_end)
+        if booking_start <= event_start < booking_end: # case where the event starts during the booking
+            overlap = (event_start, min(event_end, booking_end))
             overlaps.append(overlap)
     return overlaps
 
@@ -32,7 +32,6 @@ class MyCalendarTwo:
         booking = (start, end)
         causes_triple_booking = causes_double_booking
         if causes_triple_booking(booking, self.double_bookings):
-            print(self.double_bookings)
             return False
 
         if causes_double_booking(booking, self.events):
@@ -40,7 +39,6 @@ class MyCalendarTwo:
             self.double_bookings.extend(overlaps)
 
         self.events.append(booking)
-        print(self.double_bookings)
         return True
 
 
