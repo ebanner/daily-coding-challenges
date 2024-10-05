@@ -37,7 +37,7 @@ class Solution:
 
         for i in range(1, len(s2)-window_size+1):
             a = s2[i-1]
-            if s1_counts.get(a, -1) == window_counts.get(a, -2):
+            if s1_counts.get(a) == window_counts[a]:
                 num_matching -= 1
             
             remove(a, window_counts)
@@ -52,7 +52,7 @@ class Solution:
 
             add(b, window_counts)
 
-            if s1_counts.get(b, -1) == window_counts.get(b, -2):
+            if s1_counts.get(b, -1) == window_counts[b]:
                 num_matching += 1
 
             if num_matching == len(s1_counts):
