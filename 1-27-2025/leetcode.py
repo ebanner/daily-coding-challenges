@@ -36,8 +36,7 @@ def compute_prerequisite_pairs(graph, numCourses):
         for j in range(numCourses):
             if i == j:
                 continue
-            visited = {i}
-            prerequisite_matrix[i][j] = dfs(i, j, visited)
+            prerequisite_matrix[i][j] = dfs(i, j, {i})
     return prerequisite_matrix
 
 
@@ -45,12 +44,6 @@ class Solution:
     def checkIfPrerequisite(self, numCourses: int, prerequisites: List[List[int]], queries: List[List[int]]) -> List[bool]:
         graph = get_graph(numCourses, prerequisites)
         prerequisite_matrix = compute_prerequisite_pairs(graph, numCourses)
-        answers = []
-        for a, b in queries:
-            if prerequisite_matrix[a][b] == True:
-                answer = True
-            else:
-                answer = False
-            answers.append(answer)
+        answers = [prerequisite_matrix[a][b] for a, b in queries]
         return answers
 
