@@ -12,7 +12,7 @@
 
 (define (get-min-sum-idx nums)
   (define-values (min-idx _)
-    (for/fold ([min-idx 0] [min-sum (add1 +inf.0)])
+    (for/fold ([min-idx 0] [min-sum +inf.0])
               ([i (in-naturals)]
                [a nums] [b (rest nums)])
       (let ([sum (+ a b)])
