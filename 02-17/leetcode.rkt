@@ -35,8 +35,9 @@
   (define times (get-times))
 
   (define matching-times
-    (filter (λ (time) (= (apply get-ones time) turnedOn))
-            times))
+    (for/list ([time times]
+               #:when (= (apply get-ones time) turnedOn))
+      time))
 
   (for/list ([matching-time matching-times])
     (apply format-time matching-time)))
