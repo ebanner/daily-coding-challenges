@@ -1,0 +1,3 @@
+patterns←⎕
+word←⎕
+⎕←+/patterns∘.(∨/⍤⍷)⊂word
