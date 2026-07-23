@@ -3,9 +3,11 @@
 Submissions for websites that post daily coding challenges
 
 - [LeetCode](https://leetcode.com/problemset/)
-- [CSSBattle](https://cssbattle.dev)
 - [GeeksForGeeks](https://www.geeksforgeeks.org/problem-of-the-day)
 - [nakuri](https://www.naukri.com/code360/problem-of-the-day)
+- [freeCodeCamp](https://www.freecodecamp.org/learn/daily-coding-challenge)
+- [Educative](https://www.educative.io/daily-coding-challenge)
+- [r/dailyprogrammer](https://www.reddit.com/r/dailyprogrammer)
 
 ## LeetCode
 
