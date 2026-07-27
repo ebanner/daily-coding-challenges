@@ -1,0 +1,3 @@
+s ← 'xxxxxxXxxx'
+
+{⊃⍸⍵∊⎕A} s
