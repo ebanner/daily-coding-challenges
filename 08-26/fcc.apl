@@ -1,15 +1,17 @@
-str ← '(is?)(a(t d)h)e(n y( uo)r)aC'
+str ← '((is?)(a(t d)h)e(n y( uo)r)aC)'
 
 parse ← {
   m ← +\ (1 × ⍵ = '(') + (¯1 × ⍵ = ')') ⋄
   mm ← (-∘1@(⍸ ⍵ = '(')) m ⋄
-  mmm ← ¯1@(⍸ (m2 = 0) ∧ ⍵ ∊ '()') ⊢ mm ⋄
+  mmm ← ¯1@(⍸ (mm = 0) ∧ ⍵ ∊ '()') ⊢ mm ⋄
   (2 ⌊ mmm + 1) ⊆ ⍵
 }
 
 eval ← {
-  ⎕ ← ⍵ ⋄
   ∧/3='()'⍳⍵ : ⌽⍵ ⋄
-  '()'≡(⊃,(⊃⌽))⍵ : eval 1↓¯1↓⍵ ⋄
   ⌽⊃,/eval¨parse ⍵
+}
+
+main ← {
+  ⊃ ,/ eval¨parse str
 }
